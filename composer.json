@@ -1,0 +1,43 @@
+{
+    "name": "deemru/waveskit",
+    "description": "Waves Platform Development Kit",
+    "keywords": [ "wavesplatform" ],
+    "homepage": "http://github.com/deemru/WavesKit",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitrii Pichulin",
+            "email": "deem@deem.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "deemru/abcode": "1.0.*",
+        "deemru/blake2b": "1.0.*",
+        "deemru/curve25519": "1.0.*",
+        "deemru/cryptash": "1.0.*",
+        "deemru/pairs": "1.0.*",
+        "composer/ca-bundle": "*",
+        "google/protobuf": "^3.13",
+        "ext-curl": "*",
+        "ext-gmp": "*",
+        "ext-mbstring": "*",
+        "stephenhill/base58": "^1.1"
+    },
+    "suggest": {
+        "ext-sodium": "Up to ~2000x faster sign/verify"
+    },
+    "autoload": {
+        "psr-4": {
+            "deemru\\": "src/",
+            "Waves\\": "protobuf/Waves/",
+            "GPBMetadata\\Waves\\": "protobuf/GPBMetadata/Waves/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@php index.php"
+        ]
+    }
+}
